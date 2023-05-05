@@ -36,9 +36,13 @@ This assignment comes with React Router already installed. In order to build out
 
 ## Step 1: The Bots Index Page
 
-First, build out the page for the path `/`. Your `App` renders the `BotsPage` component which renders the `Filter` and `BotsList` component. To build out this page, you will need to use the `useEffect` hook to make a fetch to the API and store the array of bots in Context. The `BotsList` component is expecting a `robots` state in Context and will render a `BotCard` component for every robot. 
+First, build out the page for the path `/`. 
 
-Once you have the `BotCard`s showing up, you will need to update this presentational component to diaplay for every robot: 
+Your `App` renders the `BotsPage` component which renders the `Filter` and `BotsList` component. To build out this page, you will need to update `RobotProvider.js` to use the `useEffect` hook to make a fetch to the API and store the array of bots in Context. 
+
+The `BotsList` component is expecting a `robots` state in Context and will render a `BotCard` component for every robot. 
+
+Once you have the `BotCard`s showing up, you will need to update this presentational component to display the data for every robot: 
 * Avatar Image
 * Robot Name
 * An icon showing the robot's class (Assault, Defender, Support)
