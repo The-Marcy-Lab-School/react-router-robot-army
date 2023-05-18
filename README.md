@@ -86,7 +86,7 @@ To build out the filter functionality, you will need some additional state to th
 
 Finally, build out the page for the path `/robots/:id`. When a user clicks a robot on the `/` page, the URL should change to `/robots/:id` where the the ID of the robot is in the URL. Your app should render the `BotSpecs` component.
 
-Once you have the `BotSpecs` showing up, you will need to update this presentational component to diaplay for every robot:
+Once you have the `BotSpecs` showing up, you will need to update this presentational component to display for every robot:
 
 - Avatar Image
 - Robot Name
