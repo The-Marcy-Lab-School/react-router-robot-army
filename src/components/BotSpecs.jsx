@@ -54,7 +54,7 @@ function BotSpecs() {
                 </div>
               </div>
             </div>
-            <Link to="/"><button className="ui button fluid">
+            <Link><button className="ui button fluid">
               Go Back
             </button></Link>
           </div>
