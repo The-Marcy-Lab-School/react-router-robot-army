@@ -1,0 +1,15 @@
+const handleFetch = async (url, options) => {
+  try {
+    const res = await fetch(url, options);
+    if (res.ok) {
+      const data = await res.json();
+      return {ok: true, data};
+    }
+    return {ok: false, data: {}}
+  } catch (err) {
+    console.error(err);
+    return {ok: false, data: {}, err};
+  }
+}
+
+export default handleFetch;

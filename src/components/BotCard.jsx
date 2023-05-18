@@ -1,4 +1,4 @@
-function BotCard(props) {
+function BotCard({ bot }) {
 
   function botClassIcon(bot_class){
     switch (bot_class) {
@@ -16,34 +16,34 @@ function BotCard(props) {
   return (
    <div className="ui card">
       <div className="image">
-        <img alt="oh no!" src={""} />
+        <img alt="oh no!" src={bot.avatar_url} />
       </div>
       <div className="content">
         <div className="header">
-          {"Name Here"} {botClassIcon("Bot Class Here")}
+          {bot.name} {botClassIcon(bot.bot_class)}
         </div>
 
         <div className="meta">
-          <small>{"Catchphrase Here"}</small>
+          <small>{bot.catchphrase}</small>
         </div>
       </div>
       <div className="extra content">
         <span>
           <i className="icon heartbeat" />
-          {"Healt Here"}
+          {bot.health}
         </span>
 
         <span>
           <i className="icon lightning" />
-          {"Damage Here"}
+          {bot.damage}
         </span>
         <span>
           <i className="icon shield" />
-          {"Armor Here"}
+          {bot.armor}
         </span>
       </div>
     </div>
   );
-};
+}
 
 export default BotCard;
