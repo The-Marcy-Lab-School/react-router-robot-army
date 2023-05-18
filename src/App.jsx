@@ -11,6 +11,7 @@ function App() {
       <Routes>
         <Route path="/" element={<BotPage />} />
         <Route path="/robots/:id" element={<BotSpecs />} />
+        <Route path="*" element={< Page404 />} />
       </Routes>
     </div>
   );
