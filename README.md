@@ -96,7 +96,9 @@ Once you have the `BotSpecs` showing up, you will need to update this presentati
 - Robot Damage
 - Robot Armor
 
-Click on the "Go Back" button changes the URL back to `/` and takes you to the main page.
+Lastly, make it so that clicking on the "Go Back" button changes the URL back to `/` and takes you to the main page.
+
+_Hint: wrap the `button` in a `<Link>` component._
 
 ## Bonus 404 Page
 
