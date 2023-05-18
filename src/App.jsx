@@ -10,7 +10,7 @@ function App() {
     <div className="App">
       <Routes>
         <Route path="/" element={<BotPage />} />
-        <Route path="/robots/:id" />
+        <Route path="/robots/:id" element={<BotSpecs />} />
       </Routes>
     </div>
   );

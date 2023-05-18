@@ -7,6 +7,7 @@ const apiURL = 'http://localhost:4000/robots'
 function RobotProvider({ children }){
     const [robots, setRobots] = useState([]) // Make a fetch call to the API update the state
     const [filterType, setFilterType] = useState('');
+    const [botToDisplay, setBotToDisplay] = useState(-1);
 
     useEffect(() => {
         async function doFetch() {
@@ -16,11 +17,13 @@ function RobotProvider({ children }){
             }
         }
         doFetch();
-    }, [])
+    }, [botToDisplay]);
 
     const value = {
-        robots, filterType, setFilterType
+        robots, filterType, setFilterType, botToDisplay, setBotToDisplay
     }
+
+    console.log(value);
 
     return (
         <RobotContext.Provider value={value}>

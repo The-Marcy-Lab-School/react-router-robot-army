@@ -1,6 +1,16 @@
-import { Link } from 'react-router-dom'
+import { useContext } from 'react';
+import { Link, Navigate, useParams } from 'react-router-dom'
+import RobotContext from '../context/RobotContext';
 
 function BotSpecs() {
+
+  const { id } = useParams()
+  const { robots } = useContext(RobotContext);
+  const bot = robots.find(robot => robot.id === Number(id));
+
+  if (!bot) {
+    return <Navigate to="/" />
+  }
 
   function botClassIcon(bot_class){
     switch (bot_class) {
@@ -23,17 +33,17 @@ function BotSpecs() {
             <img
               alt="oh no!"
               className="ui medium circular image bordered"
-              src={""}
+              src={bot.avatar_url}
             />
           </div>
           <div className="four wide column">
-            <h2>Name: {"Name Here"}</h2>
+            <h2>Name: {bot.name}</h2>
             <p>
               <strong>Catchphrase: </strong>
-              {"Catchphrase Here"}
+              {bot.catchphrase}
             </p>
             <strong>
-              Class: {"Bot Class Here"} {botClassIcon("Bot Class Here")}
+              Class: {bot.bot_class} {botClassIcon(bot.bot_class)}
             </strong>
             <br />
             <div className="ui segment">
@@ -41,15 +51,15 @@ function BotSpecs() {
                 <div className="row">
                   <div className="column">
                     <i className="icon large circular red heartbeat" />
-                    <strong>{"Health Here"}</strong>
+                    <strong>{bot.health}</strong>
                   </div>
                   <div className="column">
                     <i className="icon large circular yellow lightning" />
-                    <strong>{"Damage Here"}</strong>
+                    <strong>{bot.damage}</strong>
                   </div>
                   <div className="column">
                     <i className="icon large circular blue shield" />
-                    <strong>{"Armor Here"}</strong>
+                    <strong>{bot.armor}</strong>
                   </div>
                 </div>
               </div>

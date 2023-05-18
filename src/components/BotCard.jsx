@@ -1,5 +1,13 @@
-function BotCard({ bot }) {
+import { useNavigate } from "react-router-dom";
+import { useContext } from "react";
+import RobotContext from "../context/RobotContext";
 
+
+function BotCard({ bot }) {
+  const { setBotToDisplay } = useContext(RobotContext);
+
+  const navigate = useNavigate();
+  
   function botClassIcon(bot_class){
     switch (bot_class) {
       case "Assault":
@@ -13,8 +21,13 @@ function BotCard({ bot }) {
     }
   }
 
+  const handleClick = () => {
+    setBotToDisplay(bot.id);
+    navigate(`/robots/${bot.id}`)
+  }
+
   return (
-   <div className="ui card">
+   <div onClick={handleClick} className="ui card">
       <div className="image">
         <img alt="oh no!" src={bot.avatar_url} />
       </div>
