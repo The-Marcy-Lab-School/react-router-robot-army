@@ -34,7 +34,15 @@ Note that not all the components in the code are rendered on the DOM, but you sh
 
 This assignment comes with React Router already installed. In order to build out this app, you may need to read the [React Router Documentation](https://reactrouter.com/web/guides/quick-start).
 
+Check out the `src/main` file to see how we import and render the `BrowserRouter` component from `react-router-dom`. Then, check out the `src/App` file to see where we define some routes for you to start with.
+
+### Context Provider
+
+We have provided you with a Context for this project. Check out the `src/context/RobotProvider` file to see how this is currently set up. Check out the `src/main` file to see where we use this provider.
+
 ### Semantic CSS
+
+Curious about the styles?
 
 Take a look at the `index.html` file and you'll see a link to include Semantic UI stylesheet:
 
