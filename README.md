@@ -54,7 +54,7 @@ _[Learn more about Semantic UI here](https://semantic-ui.com/)_
 
 ## Step 1: The Bots Index Page
 
-First, build out the page for the path `/`.
+**Feature:** On load of the path `/`, you will make a `GET` fetch to the local json-server API and display all 50 robots on the page.
 
 Your `App` renders the `BotsPage` component which renders the `Filter` and `BotsList` component. To build out this page, you will need to update `RobotProvider.js` to use the `useEffect` hook to make a fetch to the API and store the array of bots in Context.
 
@@ -72,9 +72,17 @@ Once you have the `BotCard`s showing up, you will need to update this presentati
 
 ## Step 2: The Filter Feature
 
-Second, to build out the filter functionality, you will need some additiona state. The `Filter` component should be a controlled component. You will need to add some state to represent the current dropdown value of the `<select>`.
+**Feature:** You should be able to filter the robots on the `/` page by `bot_class`, either Assault, Defender, or Support.
+
+To build out the filter functionality, you will need some additional state to the `RobotProvider`.
+
+- The `Filter` component should be a controlled component.
+- You will need to add some state to represent the current dropdown value of the `<select>`.
+- With that state provided by your context, it is up to you to figure out how to filter down the list of displayed `robots`.
 
 ## Step 3: The Bots Show Page
+
+**Feature**: Clicking on a bot should change the URL path to `/robots/:id` and display a single robot via the `BotSpecs` component.
 
 Finally, build out the page for the path `/robots/:id`. When a user clicks a robot on the `/` page, the URL should change to `/robots/:id` where the the ID of the robot is in the URL. Your app should render the `BotSpecs` component.
 
