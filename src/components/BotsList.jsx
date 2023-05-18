@@ -1,4 +1,3 @@
-import React from 'react'
 import { useContext } from 'react'
 import RobotContext from '../context/RobotContext'
 import BotCard from './BotCard'

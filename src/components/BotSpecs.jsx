@@ -62,6 +62,6 @@ function BotSpecs() {
       </div>
     </div>
   ) 
-};
+}
 
 export default BotSpecs;

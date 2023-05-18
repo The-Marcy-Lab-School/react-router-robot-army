@@ -1,6 +1,8 @@
-import BotPage from './BotsPage'
-import BotSpecs from './BotSpecs'
-import Page404 from './Page404'
+/* eslint-disable no-unused-vars */
+import BotSpecs from './components/BotSpecs'
+import Page404 from './components/Page404'
+
+import BotPage from './components/BotsPage'
 import { Route, Routes } from 'react-router-dom'
 
 function App() {
