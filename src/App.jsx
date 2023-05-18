@@ -10,8 +10,8 @@ function App() {
   return (
     <div className="App">
       <Routes>
-        <Route exact path={"/"} Component={BotPage} />
-        <Route exact path={"/robots/:id"} />
+        <Route path="/" element={<BotPage />} />
+        <Route path="/robots/:id" />
       </Routes>
     </div>
   );
