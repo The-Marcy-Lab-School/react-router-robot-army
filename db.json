@@ -292,7 +292,7 @@
     },
     {
       "id": 30,
-      "name": "Ion",
+      "name": "Ion 2",
       "bot_class": "Assault",
       "catchphrase": "101001101101101",
       "health": 62,
@@ -432,7 +432,7 @@
     },
     {
       "id": 44,
-      "name": "Doomsday",
+      "name": "Doomsday 2",
       "bot_class": "Assault",
       "catchphrase": "000101011001100",
       "health": 42,
@@ -452,7 +452,7 @@
     },
     {
       "id": 46,
-      "name": "Fabian Cortez",
+      "name": "Fabian Cortez 2",
       "bot_class": "Defender",
       "catchphrase": "000000000010101",
       "health": 64,

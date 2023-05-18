@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import RobotContext from './RobotContext'
 
-function RobotProvider(props){
+function RobotProvider({ children }){
     const [robots] = useState([]) // Make a fetch call to the API update the state
 
     const value = {
@@ -10,7 +10,7 @@ function RobotProvider(props){
 
     return (
         <RobotContext.Provider value={value}>
-            {props.children}
+            {children}
         </RobotContext.Provider>
     )
 }

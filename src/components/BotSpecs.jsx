@@ -54,14 +54,15 @@ function BotSpecs() {
                 </div>
               </div>
             </div>
-            <Link to="/"><button className="ui button fluid">
+            {/* Wrap this button component in a Link */}
+            <button className="ui button fluid">
               Go Back
-            </button></Link>
+            </button>
           </div>
         </div>
       </div>
     </div>
   ) 
-};
+}
 
 export default BotSpecs;
